@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>UW Oshkosh - CS 262 Fall 2020 - Assignment #1 - Part 5</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2800.1522" name=GENERATOR></HEAD>
+<BODY style="BACKGROUND: #ccccee; font-size: 20px">
+<TABLE style="FONT-SIZE: 32px">
+  <P style="FONT-SIZE: 36px; TEXT-ALIGN: center">CS 262 - Fall 2020 -
+    Assignment #1<br />
+     <span style="font-size: 30px;">Part 5: Left rotation</span></P>
+
+<P style="FONT-SIZE: 24px; TEXT-ALIGN: center"><a href="main.html">Back to the main assignment page</a></P>
+
+
+In this part, you must rotate the picture counter-clockwise by 90
+degrees. To help figure out the correct movement of pixels, you may
+want to start working on paper with a small handwritten array of
+pixels. You will quickly realize that you have to move rows of pixels
+into columns of pixels in the right way. Implement the <code>rotateLeft()</code>
+method that performs this transformation.<BR><BR>
+
+Calling your method on this picture three times in a row:<BR><BR>
+
+<center>
+<img src="./pics/AbigailLeft0.jpg" width=300>
+</center>
+<BR><BR>
+should produce the following sequence of pictures:<BR><BR>
+
+<center>
+<img src="./pics/AbigailLeft1.jpg" width=300>
+<img src="./pics/AbigailLeft2.jpg" width=300>
+<img src="./pics/AbigailLeft3.jpg" width=300>
+</center>
+
+<BR><BR> 
+
+Of course, applying the rotation once more should give you back the
+original picture without any loss of details.  <BR><BR>
+
+
+Note that the original picture above happens to be a perfect square
+(i.e., its width is equal to its height). Applying your method to a
+rectangular (but non-square) picture would swap its width and
+height. For this part of the assignment, <b>you do not have to change the
+dimensions of the picture</b>. Instead, your <code>rotateLeft()</code> method
+should simply perform the rotation on the top-left square corner of
+the picture whose size is equal to the minimum value of the width and
+height of the original picture.<BR>
+
+For example, applying your method three times to this non-square picture (its
+ width is larger than its height):<BR><BR>
+
+<center>
+<img src="./pics/abigail.jpg" width=300>
+</center>
+<BR><BR>
+
+produces the following sequence of pictures:<BR><BR>
+
+
+<center>
+<img src="./pics/abigailRectLeft1.jpg" width=300>
+<img src="./pics/abigailRectLeft2.jpg" width=300>
+<img src="./pics/abigailRectLeft3.jpg" width=300>
+</center>
+<BR><BR>
+
+As before, one additional application of your method would restore the original
+picture.<BR><BR>
+
+
+<P style="FONT-SIZE: 24px;
+ TEXT-ALIGN: center"><a href="main.html">Back to the main assignment
+ page</a></P>
+
+
+</BODY>
+</HTML>
