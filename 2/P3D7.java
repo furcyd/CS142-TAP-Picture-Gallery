@@ -30,7 +30,7 @@ public class P3D7 extends Application
 
         // To be completed below
 
-	// code for submission #1
+	// code for submission #2
 
     }// coolEffect method
 
