@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Submission #1</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body {
+  font-size: 20px;
+  text-align: center;
+  }
+  code {
+  display: block;
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  background-color: black;
+  color: white;
+  }
+
+  .button {
+  display: inline-block;
+  text-align: center;
+  background-color: #8833EE;
+  color: white;
+  width: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  }
+
+  .noButton {
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  }
+
+  
+  img {
+  max-width: 500px;
+  max-height: 500px;
+  }
+</style>
+<body>
+  <hr />
+  <div>
+    <a href="../1/index.html"><span class="button">1</span><a />
+    <a href="../2/index.html"><span class="button">2</span><a />
+    <span class="noButton">3</span>
+    <a href="../4/index.html"><span class="button">4</span><a />
+    <a href="../5/index.html"><span class="button">5</span><a />
+    <a href="../6/index.html"><span class="button">6</span><a />
+    <a href="../7/index.html"><span class="button">7</span><a />
+    <a href="../8/index.html"><span class="button">8</span><a />
+    <span class="noButton">9</span>
+    <span class="noButton">10</span>
+    <br />
+    <a href="../11/index.html"><span class="button">11</span><a />
+    <a href="../12/index.html"><span class="button">12</span><a />
+    <a href="../13/index.html"><span class="button">13</span><a />
+    <span class="noButton">14</span>
+    <span class="noButton">15</span>
+    <a href="../16/index.html"><span class="button">16</span><a />
+    <a href="../17/index.html"><span class="button">17</span><a />
+    <a href="../18/index.html"><span class="button">18</span><a />
+    <a href="../19/index.html"><span class="button">19</span><a />
+    <a href="../20/index.html"><span class="button">20</span><a />	    
+  </div>
+  <hr />
+  
+<h1>Submission #6</h1>
+ <p>Before picture(s):<br />
+    <img src="before1.jpg">
+ </p>
+ <p>After picture:<br />
+   <img src="after.jpg"></p>
+
+ <code>
+ <pre>
+    // My code gets the color value for each pixel.It then saves those values into 3 seperate integars.
+    //Then in order to invert the color is take those values and subtracts them from 255 to get the 
+    //inverted values that work on any picture.
+    public static void coolEffect()
+    {
+        // do NOT modify this line
+        before1.loadPicture(beforePic1Name, width, height);
+
+        // uncomment this line if 2nd picture is needed
+        // before2 = new Picture(beforePic2Name,width,height);
+
+        // Implement your cool effect below
+        for (int r = 0; r < before1.getHeight(); r++)
+        {
+            for (int c = 0; c < before1.getWidth(); c++)
+            {
+                int SavedRed = before1.getRed(c,r);
+                int SavedBlue = before1.getBlue(c,r);
+                int SavedGreen = before1.getGreen(c,r);
+                int InvRed = 255 - SavedRed;
+                int InvBlue = 255 - SavedBlue;
+                int InvGreen = 255 - SavedGreen;
+
+                before1.setRed(InvRed,c, r);
+                before1.setGreen(InvGreen,c,r);
+                before1.setBlue(InvBlue,c,r);
+
+            }
+        }
+
+    }// coolEffect method - Do NOT modify this line
+ </pre>
+ </code>
+</div>
+
+  <hr />
+  <div>
+    <a href="../1/index.html"><span class="button">1</span><a />
+    <a href="../2/index.html"><span class="button">2</span><a />
+    <span class="noButton">3</span>
+    <a href="../4/index.html"><span class="button">4</span><a />
+    <a href="../5/index.html"><span class="button">5</span><a />
+    <a href="../6/index.html"><span class="button">6</span><a />
+    <a href="../7/index.html"><span class="button">7</span><a />
+    <a href="../8/index.html"><span class="button">8</span><a />
+    <span class="noButton">9</span>
+    <span class="noButton">10</span>
+    <br />
+    <a href="../11/index.html"><span class="button">11</span><a />
+    <a href="../12/index.html"><span class="button">12</span><a />
+    <a href="../13/index.html"><span class="button">13</span><a />
+    <span class="noButton">14</span>
+    <span class="noButton">15</span>
+    <a href="../16/index.html"><span class="button">16</span><a />
+    <a href="../17/index.html"><span class="button">17</span><a />
+    <a href="../18/index.html"><span class="button">18</span><a />
+    <a href="../19/index.html"><span class="button">19</span><a />
+    <a href="../20/index.html"><span class="button">20</span><a />	    
+  </div>
+  <hr />
+
+  
+</body>
+</html>

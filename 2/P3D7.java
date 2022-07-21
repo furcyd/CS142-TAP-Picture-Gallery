@@ -21,29 +21,50 @@ import javafx.stage.Stage;
 public class P3D7 extends Application
 {
     /**************** Do NOT modify anything above this point ******************/
-    /* delete these two lines and replace them with a Java comment containing no 
-    more than 5 lines that describe how your code works precisely and concisely */
+    //Adjust the imgage
+    // Change the color effect of the image 
+    // Set green to 90, so it can change the color effect on the image's color
+    // Flip the image vertically 
+    // Set red marks of previous image on the right side of the original images 
     public static void coolEffect()
     {
+        // do NOT modify this line
         before1.loadPicture(beforePic1Name, width, height);
-        before2 = new Picture(beforePic2Name,width,height);
+        for (int c = 0; c < before1.getWidth(); c++)
+        {
+            for (int r = 0; r < before1.getHeight(); r++)
+            {
+                before1.setGreen(90, c, r);
+            }
+        }
+        
+        for (int c = 0; c < before1.getWidth() / 2; c++)
+        { 
+            for (int r = 0; r < before1.getHeight(); r++) 
+            { 
+                before1.setRed(before1.getRed(c,r), before1.getWidth() - 1 - c, r); 
+            }
+        }
+        // uncomment this line if 2nd picture is needed
+        // before2 = new Picture(beforePic2Name,width,height);
 
-        // To be completed below
+        // Implement your cool effect below
 
-	// code for submission #2
+    }// coolEffect method - Do NOT modify this line
 
-    }// coolEffect method
+    // change ONLY jpg to png (if needed)
+    private static String beforePic1Name = "./pics/before1.jpg";
+
+    // uncomment (if 2nd picture is needed) and change ONLY jpg to png (if needed)
+    //private static String beforePic2Name = "./pics/before2.jpg";
 
     // the width and height in pixels of the before1 and after pictures
-    private static int width = 480;   // update this line as needed
+    private static int width = 450;   // update this line as needed
     private static int height = 480;  // update this line as needed
 
     /**************** Do NOT modify anything below this point ******************/
 
-    private static String beforePic1Name = "./pics/before1.jpg";
-    private static String beforePic2Name = "./pics/before2.png";
     static Picture before1, before2; 
-
     static Stage stage;
 
     private static ArrayList<Button> buttons = new ArrayList<Button>();
@@ -63,29 +84,14 @@ public class P3D7 extends Application
     private static String highlighted = 
         " -fx-background-color: #5978ff; -fx-scale-y: 1.1; -fx-text-fill: white;"; 
 
-    /*************************************************************************
-     ******************************* ?????????? ******************************
-     *************************************************************************/
-
     /**
-     *  Implement your cool effect in the method belowby modifying pic using 
-     *  either one or two before pictures, making sure that the before picture(s) 
-     *  are neither taller nor wider than pic
+     *  Save the current pic in a file named ./pics/after.jpg
      */
 
-
-    /*************************************************************************
-     ********************************** Task *********************************
-     *************************************************************************/
-
-    /**
-     *  Save the current pic in the file named ./pics/after.jpg
-     */
     private static void savePic()
     {
         before1.saveToFile("./pics/after.jpg");
-    }// addHat method
-
+    } 
     /*************************************************************************
      **************** Do NOT modify the code below this point ****************
      *************************************************************************/

@@ -21,29 +21,139 @@ import javafx.stage.Stage;
 public class P3D7 extends Application
 {
     /**************** Do NOT modify anything above this point ******************/
-    /* delete these two lines and replace them with a Java comment containing no 
-    more than 5 lines that describe how your code works precisely and concisely */
+    // This filter places a pixel art horse somewhere on the picture. It uses for loops to accomplish this
+    // I did this by using a method to create a rectangle inside of an image. I then added IF statements
+    // on the inside to further divide the filter as to be more precise with my pixel placements 
+    // Originally it only made a 7x6 horse but I was able to make it larger by multiplying the ranges
+    // by 4. 
     public static void coolEffect()
     {
+        // do NOT modify this line
         before1.loadPicture(beforePic1Name, width, height);
-        before2 = new Picture(beforePic2Name,width,height);
-
-        // To be completed below
-
-	// code for submission #1
-
+        int randX = new java.util.Random().nextInt(before1.getWidth() - 40);
+        int randY = new java.util.Random().nextInt(before1.getHeight() - 40);
+        for (int c = randX; c <= randX + 28; c++) {
+            if (c <= randX + 4) {
+                for (int r = randY; r < randY + 24; r++) {
+                    if (r <= randY + 8) {
+                        before1.setRed(255, c, r);
+                        before1.setGreen(255, c, r);
+                        before1.setBlue(255, c, r);
+                    }
+                    else {
+                        before1.setRed(95, c, r);
+                        before1.setGreen(76, c, r);
+                        before1.setBlue(49, c, r);
+                    }
+                }
+            } 
+            // line 2 +3
+            else if (c <= randX + 12) {
+                for (int r = randY; r < randY + 24; r++) {
+                    if (r <= randY + 8) {
+                        before1.setRed(255, c, r);
+                        before1.setGreen(255, c, r);
+                        before1.setBlue(255, c, r);
+                    }
+                    else if (r <= randY + 15) {
+                        before1.setRed(95, c, r);
+                        before1.setGreen(76, c, r);
+                        before1.setBlue(49, c, r);
+                    }
+                    else {
+                        before1.setRed(255, c, r);
+                        before1.setGreen(255, c, r);
+                        before1.setBlue(255, c, r);
+                    }
+                }
+            }
+            //line 4
+            else if (c <= randX + 16) {
+                for (int r = randY; r < randY + 24; r++) {
+                    if (r <= randY + 15) {
+                        before1.setRed(95, c, r);
+                        before1.setGreen(76, c, r);
+                        before1.setBlue(49, c, r);
+                    }
+                    else {
+                        before1.setRed(255, c, r);
+                        before1.setGreen(255, c, r);
+                        before1.setBlue(255, c, r);
+                    }
+                }
+            }
+            //line 5
+            else if (c <= randX + 20) {
+                for (int r = randY; r < randY + 24; r++) {
+                    if (r <= randY + 4) {
+                        before1.setRed(95, c, r);
+                        before1.setGreen(76, c, r);
+                        before1.setBlue(49, c, r);
+                    }
+                    else if (r <= randY + 8) {
+                        before1.setRed(255, c, r);
+                        before1.setGreen(255, c, r);
+                        before1.setBlue(255, c, r);
+                    }
+                    else {
+                        before1.setRed(95, c, r);
+                        before1.setGreen(76, c, r);
+                        before1.setBlue(49, c, r);
+                    }
+                }
+            }
+            // line 6
+            else if (c <= randX + 24){
+                for (int r = randY; r < randY + 24; r++) {
+                    if (r <= randY + 4) {
+                        before1.setRed(95, c, r);
+                        before1.setGreen(76, c, r);
+                        before1.setBlue(49, c, r);
+                    }
+                    else if (r <= randY + 8) {
+                        before1.setRed(0, c, r);
+                        before1.setGreen(0, c, r);
+                        before1.setBlue(0, c, r);
+                    }
+                    else if (r <= randY + 12) {
+                        before1.setRed(95, c, r);
+                        before1.setGreen(76, c, r);
+                        before1.setBlue(49, c, r);
+                    }
+                    else {
+                        before1.setRed(255, c, r);
+                        before1.setGreen(255, c, r);
+                        before1.setBlue(255, c, r);
+                    }
+                }
+            }
+            else if (c <= randX + 30) {
+                for (int r = randY; r < randY + 24; r++) {
+                    if (r <= randY + 12) {
+                        before1.setRed(95, c, r);
+                        before1.setGreen(76, c, r);
+                        before1.setBlue(49, c, r);
+                    }
+                    else {
+                        before1.setRed(255, c, r);
+                        before1.setGreen(255, c, r);
+                        before1.setBlue(255, c, r);
+                    }
+                }
+            }
+        }
     }// coolEffect method
+    
+    // change ONLY jpg to png (if needed)
+    private static String beforePic1Name = "./pics/before1.jpg";
 
     // the width and height in pixels of the before1 and after pictures
-    private static int width = 480;   // update this line as needed
-    private static int height = 480;  // update this line as needed
+    private static int width = 500;   // update this line as needed
+    private static int height = 465;  // update this line as needed
 
     /**************** Do NOT modify anything below this point ******************/
 
-    private static String beforePic1Name = "./pics/before1.jpg";
-    private static String beforePic2Name = "./pics/before2.png";
     static Picture before1, before2; 
-
     static Stage stage;
 
     private static ArrayList<Button> buttons = new ArrayList<Button>();
@@ -63,28 +173,13 @@ public class P3D7 extends Application
     private static String highlighted = 
         " -fx-background-color: #5978ff; -fx-scale-y: 1.1; -fx-text-fill: white;"; 
 
-    /*************************************************************************
-     ******************************* ?????????? ******************************
-     *************************************************************************/
-
     /**
-     *  Implement your cool effect in the method belowby modifying pic using 
-     *  either one or two before pictures, making sure that the before picture(s) 
-     *  are neither taller nor wider than pic
-     */
-
-
-    /*************************************************************************
-     ********************************** Task *********************************
-     *************************************************************************/
-
-    /**
-     *  Save the current pic in the file named ./pics/after.jpg
+     *  Save the current pic in a file named ./pics/after.jpg
      */
     private static void savePic()
     {
         before1.saveToFile("./pics/after.jpg");
-    }// addHat method
+    }// savePic method
 
     /*************************************************************************
      **************** Do NOT modify the code below this point ****************
