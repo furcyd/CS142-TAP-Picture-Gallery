@@ -1,216 +1,144 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD><TITLE>UW Oshkosh - CS 262 Fall 2020 - Assignment #1</TITLE>
-<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
-<META content="MSHTML 6.00.2800.1522" name=GENERATOR></HEAD>
-<BODY style="BACKGROUND: #ccccee; FONT-SIZE: 20px;">
-<P style="FONT-SIZE: 36px; TEXT-ALIGN: center">CS 262 - Fall 2020 - Assignment #1<br />
-  <strong>Due:</b> Monday,  Oct. 12, at 9:00 AM<br />
-<span style="font-size: 24px">[with a 100-hour, penalty-free extension until 1:00 PM on Friday 10/16/2020]<br />
-  <span style="color: green">*** NO late submission will be accepted ***</span>
-</strong></p>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Submission #1</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body {
+  font-size: 20px;
+  text-align: center;
+  }
+  code {
+  display: block;
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  background-color: black;
+  color: white;
+  }
 
-<h3 style="border: 2px dotted red; text-align: center; width: 60%; margin: auto">You must work in pairs on this assignment.</h3>
+  .button {
+  display: inline-block;
+  text-align: center;
+  background-color: #8833EE;
+  color: white;
+  width: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  }
 
-<h2>Objectives</h2>
-<ol>
-  <LI>Manipulate 2D arrays of objects.</li>
-  <LI>Gain more practice with iteration and recursion.</li>
-  <LI>Have a lot of fun!</li>
-</ol>
+  .noButton {
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  }
 
-<h2>Preparation for this assignment</h2>
-
-
-As you know, design must always precede implementation. You must
-write pseudocode for each and every one of your
-methods in this assignment, but I will not grade them nor do you have
-to submit them. However, <b>you will have to show me your pseudocode
-for each method you have a question about</b>. I will first help you
-get the pseudocode right (if needed) before I can help with any implementation
-issue. No (preliminary) pseudocode, no help from me.<BR><BR>
-
-
-<h2>What you need to do</h2> 
-
-<OL> 
-
-  <LI>Download the code you will be building upon from Canvas, namely the file
-<code>A1.zip</code> that contains a working
-BlueJ project which you need to complete.</li>
-
-<LI>The code you downloaded contains a small image-processing library
-(i.e., the <code>Picture</code> class) that I wrote to help you
-implement some nice visual effects pretty easily. You must consult the
-documentation for the <code>Picture</code> class in BlueJ, under the
-<code>Documentation</code> dropdown option in the top-right corner of the
-editor window.  You *might*  also need to look up
-the <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html">Java
-API documentation for the built-in <code>Color</code> class.</a></li>
-
-<LI>Study the provided <code>A1.java</code> file. You will have to
-  properly plug in your code into this file.</li>
   
-  <LI>For each part of the assignment listed below, you must write
-    one or more methods that perform the corresponding
-    effect. Design the method(s) using pseudocode, and then implement them
-    in the <code>A1.java</code> file itself at the clearly indicated location
-    for each part.
-    
-  <li>To test your program, right-click on the <code>A1</code> class
-  in BlueJ and select the first option: <code>Run JavaFX
-  application</code>. This will open up a window containing one picture
-  and a collection of buttons (as shown below). Each button (except
-  the first one) or pair of buttons corresponds to one part of this
-  assignment.<br /><br />
+  img {
+  max-width: 500px;
+  max-height: 500px;
+  }
+</style>
+<body>
+  <hr />
+  <div>
+    <a href="../1/index.html"><span class="button">1</span><a />
+    <a href="../2/index.html"><span class="button">2</span><a />
+    <span class="noButton">3</span>
+    <a href="../4/index.html"><span class="button">4</span><a />
+    <a href="../5/index.html"><span class="button">5</span><a />
+    <a href="../6/index.html"><span class="button">6</span><a />
+    <a href="../7/index.html"><span class="button">7</span><a />
+    <a href="../8/index.html"><span class="button">8</span><a />
+    <span class="noButton">9</span>
+    <span class="noButton">10</span>
+    <br />
+    <a href="../11/index.html"><span class="button">11</span><a />
+    <a href="../12/index.html"><span class="button">12</span><a />
+    <a href="../13/index.html"><span class="button">13</span><a />
+    <span class="noButton">14</span>
+    <span class="noButton">15</span>
+    <a href="../16/index.html"><span class="button">16</span><a />
+    <a href="../17/index.html"><span class="button">17</span><a />
+    <a href="../18/index.html"><span class="button">18</span><a />
+    <a href="../19/index.html"><span class="button">19</span><a />
+    <a href="../20/index.html"><span class="button">20</span><a />	    
+  </div>
+  <hr />
+  
+<h1>Submission #2</h1>
+ <p>Before picture(s):<br />
+    <img src="before1.jpg">
+ </p>
+ <p>After picture:<br />
+   <img src="after.jpg"></p>
 
-    <center>
-    <img src="./pics/app.jpeg" width=800>
-    </center>
-    
-</OL>
-<br />
+ <code>
+ <pre>
+    //Adjust the imgage
+    // Change the color effect of the image 
+    // Set green to 90, so it can change the color effect on the image's color
+    // Flip the image vertically 
+    // Set red marks of previous image on the right side of the original images 
+    public static void coolEffect()
+    {
+        // do NOT modify this line
+        before1.loadPicture(beforePic1Name, width, height);
+        for (int c = 0; c < before1.getWidth(); c++)
+        {
+            for (int r = 0; r < before1.getHeight(); r++)
+            {
+                before1.setGreen(90, c, r);
+            }
+        }
+        
+        for (int c = 0; c < before1.getWidth() / 2; c++)
+        { 
+            for (int r = 0; r < before1.getHeight(); r++) 
+            { 
+                before1.setRed(before1.getRed(c,r), before1.getWidth() - 1 - c, r); 
+            }
+        }
+        // uncomment this line if 2nd picture is needed
+        // before2 = new Picture(beforePic2Name,width,height);
 
-This assignment comprises 10 parts (plus an optional bonus part)
-that are described in the table below.
+        // Implement your cool effect below
 
-<center>
+    }// coolEffect method - Do NOT modify this line
+ </pre>
+ </code>
+</div>
 
-<BR>
-  <TABLE border=1 style="font-size: 20px;">
-    <TBODY>
-    <TR>
-      <TH width=50>Part</TH>
-      <TH >Task</TH>
-      <TH width = 60>Points</TH>
-    </TR>
+  <hr />
+  <div>
+    <a href="../1/index.html"><span class="button">1</span><a />
+    <a href="../2/index.html"><span class="button">2</span><a />
+    <span class="noButton">3</span>
+    <a href="../4/index.html"><span class="button">4</span><a />
+    <a href="../5/index.html"><span class="button">5</span><a />
+    <a href="../6/index.html"><span class="button">6</span><a />
+    <a href="../7/index.html"><span class="button">7</span><a />
+    <a href="../8/index.html"><span class="button">8</span><a />
+    <span class="noButton">9</span>
+    <span class="noButton">10</span>
+    <br />
+    <a href="../11/index.html"><span class="button">11</span><a />
+    <a href="../12/index.html"><span class="button">12</span><a />
+    <a href="../13/index.html"><span class="button">13</span><a />
+    <span class="noButton">14</span>
+    <span class="noButton">15</span>
+    <a href="../16/index.html"><span class="button">16</span><a />
+    <a href="../17/index.html"><span class="button">17</span><a />
+    <a href="../18/index.html"><span class="button">18</span><a />
+    <a href="../19/index.html"><span class="button">19</span><a />
+    <a href="../20/index.html"><span class="button">20</span><a />	    
+  </div>
+  <hr />
 
-    <TR>
-      <TD align="center">1.</TD>
-      <TD><a href="part1.html">Removing a color component (GREEN or BLUE)</a></TD>
-      <TD align="center">5</td>
-    <TR>
-
-    <TR>
-      <TD align="center">2.</TD>
-      <TD><a href="part2.html">Darkening/lightening the picture</a></TD>
-      <TD align="center">5</td>
-    <TR>
-
-    <TR>
-      <TD align="center">3.</TD>
-      <TD><a href="part3.html">Taking the negative</a></TD>
-      <TD align="center">10</td>
-    <TR>
-
-    <TR>
-      <TD align="center">4.</TD>
-      <TD><a href="part4.html">Converting to grayscale</a></TD>
-      <TD align="center">10</td>
-    <TR>
-
-
-    <TR>
-      <TD align="center">5.</TD>
-      <TD><a href="part5.html">Left rotation</a></TD>
-      <TD align="center">15</td>
-    <TR>
-
-    <TR>
-      <TD align="center">6.</TD>
-      <TD><a href="part6.html">Vertical mirror</a></TD>
-      <TD align="center">10</td>
-    <TR>
-
-    <TR>
-      <TD align="center">7.</TD>
-      <TD><a href="part7.html">Vertical flip</a></TD>
-      <TD align="center">10</td>
-    <TR>
-
-    <TR>
-      <TD align="center">8.</TD>
-      <TD><a href="part8.html">Fix the temple</a></TD>
-      <TD align="center">10</td>
-    <TR>
-
-    <TR>
-      <TD align="center">9.</TD>
-      <TD><a href="part9.html">Remove red eye</a></TD>
-      <TD align="center">10</td>
-    <TR>
-
-    <TR>
-      <TD align="center">10.</TD>
-      <TD><a href="part10.html">Draw fractal</a></TD>
-      <TD align="center">15</td>
-    <TR>      
-
-      
-    <TR>
-      <TD align="center"><BR></TD>
-      <TD><BR></TD>
-      <TD align="center"><B>Total: 100</B></td>
-    <TR>
-
-    <TR>
-      <TD align="center">*</TD>
-      <TD><a href="bonus.html">Bonus part</a></TD>
-      <TD align="center">(up to) 5</td>
-    <TR>
-
-    <TR>
-      <TD align="center"><BR></TD>
-      <TD><BR></TD>
-      <TD align="center"><B>Total: (up to) 105</B></td>
-    <TR>
-
-    </TABLE>
-</center>
-
-<h2> Requirements</h2>
-
-You must use iteration exclusively in parts 1 through 9.<br/><br/>
-
-You must use recursion in part 10 only.<br/><br/>
-
-For each one of parts 1 through 9, you must implement only the given methods.
-You may NOT create any additional methods.<br/><br/>
-
-For part 10, you must implement the provided method as well as at
-least one other, recursive method. All of the methods you add for this
-part must appear right after the <code>drawFractal()</code> method.<br/><br/>
-
-You are not allowed to modify the given code, add any new import
-statements or instance/class variables.<br/><br/>
-
-As usual, for full credit, your code must be formatted and indented
-professionally. It must not only pass all of my tests but also be as
-concise as possible. All of the usual requirements common to all labs
-so far also apply to assignments.<br/><br/>
-
-The only methods you are allowed to call in this assignment are those
-available in the <code>Picture</code> class, as well as one or more
-methods in the <code>javafx.scene.paint.Color</code> class, but ONLY if
-the functionality you need is not already provided in
-the <code>Picture</code> class.<br/><br/>
-
-Code that crashes, throws an exception, or produces incorrect output
-for at least one picture will be penalized.
-
-<h2> What to submit</h2>
-
-When you are done with all parts, zip up your entire BlueJ project
-folder (though you should only have modified the <code>A1.java</code>
-file), and submit the resulting file named
-<code>A1.zip</code> to the Canvas dropbox (under only ONE of the team
-members' account) before the deadline above.
-
-For full credit, your submission must load properly and work as is in BlueJ.
-
-<BR><BR>
-
-<P style="FONT-SIZE: 24px; TEXT-ALIGN: center; color: red">And remember objective #3!</P>
-
-</BODY>
-
-</HTML>
+  
+</body>
+</html>
